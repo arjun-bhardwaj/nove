@@ -35,47 +35,20 @@ export default function ProductPage() {
         <main className="min-h-screen bg-white pt-[120px] pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-                    {/* Media Gallery (Images + Videos) */}
+                    {/* Image Gallery */}
                     <div className="space-y-4">
-                        {/* Main Media Display */}
                         <div className="aspect-square relative bg-[#F5F5F7] rounded-3xl overflow-hidden">
-                            {/* Product Video */}
-                            <video
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                            >
-                                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
-                                {/* Fallback to image if video doesn't load */}
-                                <Image
-                                    src={product.image}
-                                    alt={product.name}
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </video>
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                fill
+                                className="object-cover"
+                                priority
+                            />
                         </div>
-                        {/* Thumbnails (Images + Video Preview) */}
+                        {/* Thumbnails (Placeholder) */}
                         <div className="grid grid-cols-4 gap-4">
-                            {/* Video Thumbnail */}
-                            <div className="aspect-square bg-[#F5F5F7] rounded-xl relative overflow-hidden cursor-pointer hover:opacity-80 transition-opacity group">
-                                <video
-                                    className="w-full h-full object-cover"
-                                    muted
-                                >
-                                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
-                                </video>
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
-                            </div>
-                            {/* Image Thumbnails */}
-                            {[1, 2, 3].map((i) => (
+                            {[1, 2, 3, 4].map((i) => (
                                 <div key={i} className="aspect-square bg-[#F5F5F7] rounded-xl relative overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
                                     <Image
                                         src={product.image}
