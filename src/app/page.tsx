@@ -9,7 +9,7 @@ import EveningEdit from '@/components/EveningEdit';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white pt-[104px]">
+    <main className="min-h-screen bg-white">
       <Hero />
       <PressSection />
       <ProductGrid />

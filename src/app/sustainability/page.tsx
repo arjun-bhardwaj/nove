@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function SustainabilityPage() {
     return (
-        <main className="min-h-screen bg-white pt-[104px]">
+        <main className="min-h-screen bg-white mt-[104px]">
             {/* Hero */}
             <section className="relative py-24 bg-[#F5F5F7]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
