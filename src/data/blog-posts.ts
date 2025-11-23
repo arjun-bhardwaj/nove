@@ -70,7 +70,7 @@ Choosing sustainable maternity wear isn't just about pregnancy—it's about the 
         author: 'Ananya Desai',
         date: '2024-01-10',
         readTime: '4 min read',
-        image: 'https://images.unsplash.com/photo-1583846112476-f74e2b7f7b23?w=800&auto=format&fit=crop'
+        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop'
     },
     {
         id: '3',
