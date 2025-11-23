@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useToast } from '@/context/ToastContext';
+import { sendEmail } from '@/lib/email';
 
 export default function SignUpPage() {
     const [email, setEmail] = useState('');
@@ -37,6 +38,19 @@ export default function SignUpPage() {
         if (error) {
             showToast(error.message, 'error');
         } else {
+            // Send welcome email
+            await sendEmail({
+                to: email,
+                subject: 'Welcome to Nove Maternity',
+                html: `
+                    <h1>Welcome to Nove, ${fullName}!</h1>
+                    <p>We're thrilled to have you join our community of mothers.</p>
+                    <p>Explore our collection of sustainable, comfortable maternity wear designed to grow with you.</p>
+                    <br/>
+                    <a href="${window.location.origin}/account">Go to My Account</a>
+                `
+            });
+
             showToast('Account created! Please check your email.', 'success');
             router.push('/login');
         }

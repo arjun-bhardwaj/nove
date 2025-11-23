@@ -12,7 +12,8 @@ export const products = [
             'Over-the-bump support',
             'Moisture-wicking fabric',
             'Machine washable'
-        ]
+        ],
+        category: 'Bottoms'
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const products = [
             'Built-in shelf bra',
             'Breathable cotton',
             'Adjustable straps'
-        ]
+        ],
+        category: 'Tops'
     },
     {
         id: 3,
@@ -42,7 +44,8 @@ export const products = [
             'Premium rayon fabric',
             'Suitable for nursing',
             'Side pockets'
-        ]
+        ],
+        category: 'Dresses'
     },
     {
         id: 4,
@@ -57,7 +60,8 @@ export const products = [
             'Adjustable velcro',
             'Breathable mesh',
             'Doctor recommended'
-        ]
+        ],
+        category: 'Accessories'
     },
     {
         id: 5,
@@ -72,7 +76,8 @@ export const products = [
             'Over-the-bump jersey band',
             'Functional pockets',
             'Skinny fit'
-        ]
+        ],
+        category: 'Bottoms'
     },
     {
         id: 6,
@@ -87,7 +92,8 @@ export const products = [
             'Temperature regulating',
             'Inner tie for security',
             'Deep pockets'
-        ]
+        ],
+        category: 'Loungewear'
     },
     // Evening Edit Collection
     {

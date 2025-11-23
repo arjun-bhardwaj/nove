@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabaseClient';
+import { sendEmail } from '@/lib/email';
 
 export async function POST(request: Request) {
     const body = await request.json();
@@ -28,5 +29,21 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, order: data[0] });
+    const order = data[0];
+
+    // Send confirmation email
+    await sendEmail({
+        to: customer.email,
+        subject: `Order Confirmation #${order.id.slice(0, 8)}`,
+        html: `
+            <h1>Thank you for your order, ${customer.firstName}!</h1>
+            <p>We have received your order and are getting it ready.</p>
+            <p><strong>Order ID:</strong> ${order.id}</p>
+            <p><strong>Total:</strong> ₹${total.toLocaleString()}</p>
+            <br/>
+            <p>We will notify you when your items ship.</p>
+        `
+    });
+
+    return NextResponse.json({ success: true, order });
 }

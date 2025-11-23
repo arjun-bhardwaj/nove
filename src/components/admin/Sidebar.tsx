@@ -9,6 +9,7 @@ const navigation = [
     { name: 'Dashboard', href: '/admin', icon: '📊' },
     { name: 'Products', href: '/admin/products', icon: '📦' },
     { name: 'Orders', href: '/admin/orders', icon: '🛍️' },
+    { name: 'Users', href: '/admin/users', icon: '👥' },
     { name: 'Analytics', href: '/admin/analytics', icon: '📈' },
 ];
 
@@ -38,8 +39,8 @@ export default function Sidebar() {
                             key={item.name}
                             href={item.href}
                             className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive
-                                    ? 'bg-gray-800 text-white'
-                                    : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                                ? 'bg-gray-800 text-white'
+                                : 'text-gray-400 hover:bg-gray-800 hover:text-white'
                                 }`}
                         >
                             <span className="text-xl">{item.icon}</span>

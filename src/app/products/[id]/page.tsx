@@ -9,6 +9,7 @@ import { useToast } from '@/context/ToastContext';
 import { useWishlist } from '@/context/WishlistContext';
 import RelatedProducts from '@/components/RelatedProducts';
 import VirtualTryOn from '@/components/VirtualTryOn';
+import ProductReviews from '@/components/ProductReviews';
 
 export default function ProductPage() {
     const params = useParams();
@@ -158,6 +159,10 @@ export default function ProductPage() {
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <div className="mt-24">
+                    <ProductReviews productId={product.id} />
                 </div>
 
                 <RelatedProducts currentId={product.id} />
