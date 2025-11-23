@@ -7,6 +7,7 @@ export const products = [
         priceString: '₹2,499',
         size: 'large',
         image: '/images/black_maternity_leggings_1763899351258.png',
+        video: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         details: [
             'Ultra-soft bamboo blend',
             'Over-the-bump support',
@@ -22,6 +23,7 @@ export const products = [
         priceString: '₹1,299',
         size: 'small',
         image: '/images/nursing_top_beige_1763899367446.png',
+        video: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
         details: [
             'Easy one-handed clip access',
             'Built-in shelf bra',
@@ -37,6 +39,7 @@ export const products = [
         priceString: '₹4,499',
         size: 'small',
         image: '/images/maternity_dress_floral_1763899380647.png',
+        video: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
         details: [
             'Flowy silhouette',
             'Premium rayon fabric',
