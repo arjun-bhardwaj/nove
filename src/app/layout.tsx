@@ -34,7 +34,9 @@ export default function RootLayout({
                   <WishlistDrawer />
                 </>
               )}
-              {children}
+              <div className={isAdminRoute ? '' : ''}>
+                {children}
+              </div>
             </WishlistProvider>
           </CartProvider>
         </ToastProvider>

@@ -25,7 +25,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative flex flex-col items-center justify-center text-center bg-[#F5F5F7] overflow-hidden" style={{ height: 'calc(100vh - 104px)', marginTop: '104px' }}>
+        <section className="relative flex flex-col items-center justify-center text-center bg-[#F5F5F7] overflow-hidden" style={{ minHeight: '100vh', paddingTop: '120px' }}>
             <div ref={heroRef} className="max-w-4xl px-4 sm:px-6 lg:px-8 opacity-0 transition-opacity duration-1000 transform translate-y-10" style={{ animationFillMode: 'forwards' }}>
                 <h1 className="text-5xl md:text-7xl font-serif font-medium tracking-tight text-gray-900 mb-6">
                     Designed for Life.
