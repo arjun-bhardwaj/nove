@@ -53,6 +53,15 @@ export default function Navbar() {
                         </div>
 
                         <div className="flex items-center space-x-4">
+                            <Link
+                                href="/account"
+                                className="p-2 text-gray-700 hover:text-gray-900 transition-colors"
+                                aria-label="Account"
+                            >
+                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </Link>
                             <button
                                 onClick={toggleWishlistDrawer}
                                 className="relative p-2 text-gray-700 hover:text-gray-900 transition-colors"
@@ -105,8 +114,11 @@ export default function Navbar() {
                             <Link href="/sustainability" className="block text-gray-700 hover:text-gray-900 font-medium">
                                 Sustainability
                             </Link>
-                            <Link href="/#about" className="block text-gray-700 hover:text-gray-900 font-medium">
+                            <Link href="/about" className="block text-gray-700 hover:text-gray-900 font-medium">
                                 About
+                            </Link>
+                            <Link href="/account" className="block text-gray-700 hover:text-gray-900 font-medium">
+                                My Account
                             </Link>
                         </div>
                     </div>
