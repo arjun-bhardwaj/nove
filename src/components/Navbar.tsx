@@ -33,15 +33,22 @@ export default function Navbar() {
                             NOVE
                         </Link>
 
+
                         <div className="hidden md:flex items-center space-x-8">
                             <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                                 Shop
                             </Link>
+                            <Link href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+                                Blog
+                            </Link>
+                            <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+                                About
+                            </Link>
                             <Link href="/sustainability" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
                                 Sustainability
                             </Link>
-                            <Link href="/#about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-                                About
+                            <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
+                                Contact
                             </Link>
                         </div>
 
