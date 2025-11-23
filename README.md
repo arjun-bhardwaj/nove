@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nove - Premium Maternity E-commerce Platform
 
-## Getting Started
+A fully-featured, production-ready e-commerce platform for maternity wear built with Next.js, Supabase, and Razorpay.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Customer Experience
+- Shopping cart & wishlist
+- Razorpay payment integration (cards, UPI, netbanking)
+- Virtual try-on feature
+- Product reviews ("Love Letters")
+- Sustainability page
+- Responsive design
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Admin Panel
+- Real-time analytics with charts
+- Product management (CRUD, bulk operations, CSV export)
+- Order management (filters, status updates, tracking)
+- Stock tracking & low stock alerts
+- Dashboard with key metrics
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: Next.js 16, TypeScript, Tailwind CSS
+- **Backend**: Supabase (PostgreSQL)
+- **Payments**: Razorpay
+- **Charts**: Recharts
+- **Deployment**: Vercel
 
-## Learn More
+## 📦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+- Node.js 18+
+- Supabase account
+- Razorpay account
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd website_maternity\ wear
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in your Supabase and Razorpay credentials.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Run database migrations (see `SUPABASE_SETUP.md`)
+
+5. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🚀 Deployment
+
+See `DEPLOYMENT.md` for detailed deployment instructions.
+
+Quick deploy to Vercel:
+1. Push to GitHub
+2. Import to Vercel
+3. Add environment variables
+4. Deploy!
+
+## 📝 Documentation
+
+- `SUPABASE_SETUP.md` - Database setup guide
+- `DEPLOYMENT.md` - Deployment instructions
+
+## 🔒 Security
+
+- Environment variables for all secrets
+- Supabase Row Level Security (RLS) enabled
+- HTTPS only in production
+- Secure payment processing via Razorpay
+
+## 📄 License
+
+Private - All rights reserved
+
+## 🙏 Acknowledgments
+
+Built with ❤️ for expecting mothers everywhere.
