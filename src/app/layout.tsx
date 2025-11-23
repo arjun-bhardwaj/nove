@@ -9,6 +9,7 @@ import { WishlistProvider } from "@/context/WishlistContext";
 import CartDrawer from "@/components/CartDrawer";
 import WishlistDrawer from "@/components/WishlistDrawer";
 import { usePathname } from "next/navigation";
+import { AuthProvider } from '@/context/AuthContext';
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
@@ -24,22 +25,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <ToastProvider>
-          <CartProvider>
-            <WishlistProvider>
-              {!isAdminRoute && (
-                <>
-                  <Navbar />
-                  <CartDrawer />
-                  <WishlistDrawer />
-                </>
-              )}
-              <div className={isAdminRoute ? '' : ''}>
-                {children}
-              </div>
-            </WishlistProvider>
-          </CartProvider>
-        </ToastProvider>
+        <AuthProvider>
+          <ToastProvider>
+            <CartProvider>
+              <WishlistProvider>
+                {!isAdminRoute && (
+                  <>
+                    <Navbar />
+                    <CartDrawer />
+                    <WishlistDrawer />
+                  </>
+                )}
+                <div className={isAdminRoute ? '' : ''}>
+                  {children}
+                </div>
+              </WishlistProvider>
+            </CartProvider>
+          </ToastProvider>
+        </AuthProvider>
       </body>
     </html>
   );
